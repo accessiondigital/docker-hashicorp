@@ -25,6 +25,7 @@ RUN apk add --no-cache \
     && pip3 install --upgrade pip \
     && pip3 install --upgrade awscli==${AWSCLI_VERSION} \
     && pip3 install --upgrade ansible==${ANSIBLE_VERSION} \
+    && pip3 install crudini \
     && rm -rf /var/cache/apk/* \
     && curl -LO https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
     && curl -LO https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip \
